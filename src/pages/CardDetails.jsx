@@ -186,7 +186,7 @@ const CardDetails = () => {
                     )}
 
                     {/* Identity */}
-                    <div>
+                    <div className='space-y-1'>
                         <h2 className="text-2xl font-bold">{card.name}</h2>
                         <p className="text-sm text-gray-600 dark:text-gray-400">{card.title}</p>
                         <p className="text-sm text-gray-600 dark:text-gray-400">{card.position} @ {card.company}</p>
