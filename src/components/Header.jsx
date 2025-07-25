@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import { FaSun, FaMoon, FaBars } from 'react-icons/fa';
 import MobileMenu from './MobileMenu';
-import LIGHT from './../assets/LightCardence.png';
-import DARK from './../assets/DarkCardence.png';
+import LIGHT from './../assets/Cardence.png';
 import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
@@ -31,13 +30,8 @@ const Header = () => {
 
     return (
         <header className="w-full bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white px-6 py-4 flex items-center justify-between shadow-md dark:shadow-gray-800 z-50 fixed top-0 md:px-24">
-            {/* Logo */}
             <div>
-                {darkMode ? (
                     <img src={LIGHT} alt="Cardence logo" className="h-10 w-auto" />
-                ) : (
-                    <img src={DARK} alt="Cardence logo" className="h-10 w-auto" />
-                )}
             </div>
 
             <nav className="hidden md:flex items-center gap-6">

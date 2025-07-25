@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
     return (
-        <main className="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-300">
-            <section className="min-h-[70vh] px-6 pt-10 bg-gray-100 dark:bg-gray-900 flex items-center text-gray-900 dark:text-white">
+        <main className="w-full bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-300 overflow-x-hidden">
+            <section className="min-h-[70vh] px-4 sm:px-6 pt-10 bg-gray-100 dark:bg-gray-900 flex items-center text-gray-900 dark:text-white">
                 <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 max-w-6xl mx-auto h-full">
 
                     {/* Left: Text */}
@@ -37,18 +37,18 @@ const Home = () => {
                         </Link>
                     </div>
 
-                    <div className="flex-1 md:max-w-xl w-full">
+                    <div className="flex-1 w-full max-w-sm sm:max-w-md md:max-w-xl mx-auto">
                         <img
                             src={CARD}
                             alt="Card illustration"
-                            className="w-full h-auto max-h-[500px] object-contain rounded-full"
+                            className="w-full h-auto max-h-[400px] sm:max-h-[500px] object-contain rounded-full"
                         />
                     </div>
                 </div>
             </section>
 
             {/* How It Works */}
-            <section className="py-20 px-6 text-center bg-gray-200 dark:bg-gray-800 transition-colors duration-300">
+            <section className="py-20 px-4 sm:px-6 text-center bg-gray-200 dark:bg-gray-800 transition-colors duration-300">
                 <h2 className="text-3xl font-bold mb-10">How It Works</h2>
                 <div className="grid md:grid-cols-3 gap-10 max-w-5xl mx-auto">
                     {[
@@ -84,25 +84,7 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* <section className="max-w-5xl mx-auto mb-20">
-                <h2 className="text-2xl font-semibold mb-6">Why Choose Cardence?</h2>
-                <ul className="grid gap-6 md:grid-cols-2">
-                    {[
-                        "Share with a single link",
-                        "Customizable profiles",
-                        "Works across all devices",
-                        "Privacy-first design",
-                    ].map((feature, i) => (
-                        <li key={i} className="flex items-start gap-3 bg-white dark:bg-gray-800 p-4 rounded shadow">
-                            <FaCheckCircle className="text-blue-500 mt-1" />
-                            <span className="text-gray-800 dark:text-gray-200">{feature}</span>
-                        </li>
-                    ))}
-                </ul>
-            </section> */}
-
-            {/* Features */}
-            <section className="py-20 px-6 max-w-6xl mx-auto">
+            <section className="py-20 px-4 sm:px-6 max-w-6xl mx-auto">
                 <h2 className="text-3xl font-bold text-center mb-12">Why Choose Cardence?</h2>
                 <div className="grid md:grid-cols-2 gap-12">
                     {[
@@ -144,7 +126,7 @@ const Home = () => {
 
             <div className='flex items-center justify-center pb-12'>
                 <Link to='/about'>
-                    <button className="inline-flex items-center px-5 py-3 text-sm font-semibold dark:text-white border border-blue-600 hover:bg-blue-200 hover:text-black rounded-full shadow transition duration-300">
+                    <button className="inline-flex items-center px-5 py-3 text-sm font-semibold dark:hover:text-blue-800 dark:text-white border border-blue-600 hover:bg-blue-200 hover:text-black rounded-full shadow transition duration-300">
                         Read about our mission...
                     </button>
                 </Link>

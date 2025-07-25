@@ -32,18 +32,6 @@ const MyCards = () => {
             .includes(search.toLowerCase())
     );
 
-    if (cards.length === 0) {
-        return (
-            <section className="pt-24 px-6 text-center text-gray-600 dark:text-gray-300">
-                <h2 className="text-2xl font-bold mb-2">No cards found</h2>
-                <p className="mb-4">You haven't saved any digital business cards yet.</p>
-                <Link to="/create" className="text-blue-500 hover:underline">
-                    Create your first card
-                </Link>
-            </section>
-        );
-    }
-
     return (
         <section className="pt-28 px-6 bg-gray-100 min-h-screen text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-300">
             <section className="max-w-5xl mx-auto">
@@ -69,11 +57,17 @@ const MyCards = () => {
                     </div>
                 </div>
 
-                {filteredCards.length === 0 ? (
-                    <p className="text-center text-gray-600 dark:text-gray-400">No matching cards found.</p>
+                {filteredCards.length <= 0 ? (
+                    <section className="pt-24 px-6 text-center">
+                        <h2 className="text-2xl font-bold mb-2">No cards found</h2>
+                        <p className="mb-4">You haven't saved any digital business cards yet.</p>
+                        <Link to="/create">
+                            <button className="inline-flex items-center px-5 py-3 text-sm font-semibold dark:hover:text-blue-800 dark:text-white border border-blue-600 hover:bg-blue-200 hover:text-black rounded-full shadow transition duration-300">Create your first card</button>
+                        </Link>
+                    </section>
                 ) : (
                     <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                       {[...filteredCards].reverse().map((card) => (
+                        {[...filteredCards].reverse().map((card) => (
                             <div
                                 key={card.id}
                                 className="bg-white dark:bg-gray-800 p-4 rounded-md shadow flex flex-col justify-between"
